@@ -17,7 +17,6 @@ function RecipeResults({ recipes, onViewRecipe }) {
               <p className="ingredient-match">
                 Match Score: {recipe.usedIngredientCount}/{recipe.usedIngredientCount + recipe.missedIngredientCount}
               </p>
-              <p className="cooking-time">Ready in: {recipe.readyInMinutes || 'N/A'} min</p>
               <button 
                 className="view-recipe-button"
                 onClick={() => onViewRecipe(recipe.id)}
