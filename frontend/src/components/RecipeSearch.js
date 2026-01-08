@@ -31,7 +31,7 @@ function RecipeSearch({ onSearchResults }) {
 
   return (
     <div className="recipe-search-container">
-      <div className="logo">LOGO</div>
+      <div className="logo">GOceries</div>
       
       <form onSubmit={handleSearch} className="search-form">
         <div className="input-container">

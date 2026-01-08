@@ -1,0 +1,57 @@
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 52px;
+  font-weight: 800;
+  color: #3a4c13;
+  margin-bottom: 30px;
+}
+
+.search-button {
+  background-color: #3a4c13;   /* button box color */
+  color: white;               
+  font-size: 16px;             
+  padding: 12px 24px;          /* button size */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #628021;
+  transform: scale(1.03);
+}
+
+.search-button:disabled {
+  background-color: #698923;
+  cursor: not-allowed;
+}
+
+.ingredients-input {
+  width: 280px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingredients-input::placeholder {
+  color: #628021;
+  font-style: italic;
+}
+
+.recipe-search-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;   /* 👈 stack items */
+  align-items: center;
+  gap: 12px;                /* space between input & button */
+}
