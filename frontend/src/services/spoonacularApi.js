@@ -10,7 +10,7 @@ const BASE_URL = 'https://api.spoonacular.com';
 export const searchRecipesByIngredients = async (ingredients, number = 12) => {
   try {
     const response = await fetch(
-      `${BASE_URL}/recipes/findByIngredients?ingredients=${encodeURIComponent(ingredients)}&number=${number}&ranking=1&ignorePantry=true&apiKey=${API_KEY}`
+      `${BASE_URL}/recipes/findByIngredients?ingredients=${encodeURIComponent(ingredients)}&number=${number}&ranking=2&ignorePantry=true&apiKey=${API_KEY}`
     );
     
     if (!response.ok) {
