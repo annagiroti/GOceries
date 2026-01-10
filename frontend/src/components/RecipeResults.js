@@ -1,7 +1,7 @@
 import React from 'react';
 import './RecipeResults.css';
 
-function RecipeResults({ recipes, onViewRecipe }) {
+function RecipeResults({ recipes, onViewRecipe, onNewSearch }) {
   return (
     <div className="recipe-results-container">
       <div className="recipes-list">
@@ -29,11 +29,15 @@ function RecipeResults({ recipes, onViewRecipe }) {
       </div>
       
       <div className="more-recipes-indicator">
-        <p>More Recipes</p>
-        <span>↓</span>
+        <p>More Recipes Soon!</p>
+        <span>🔜</span>
       </div>
+
+      <button className="back-button" onClick={onNewSearch}>
+        ← Back to Search
+      </button>
     </div>
   );
 }
 
-export default RecipeResults;
+export default RecipeResults

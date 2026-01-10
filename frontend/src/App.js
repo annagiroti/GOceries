@@ -26,6 +26,7 @@ function App() {
   const handleBackToSearch = () => {
     setCurrentView('search');
     setRecipes([]);
+    setSelectedRecipeId(null);
   };
 
   return (
@@ -38,6 +39,7 @@ function App() {
         <RecipeResults 
           recipes={recipes}
           onViewRecipe={handleViewRecipe}
+          onNewSearch={handleBackToSearch}
         />
       )}
       

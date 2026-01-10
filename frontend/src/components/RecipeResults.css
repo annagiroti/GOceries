@@ -9,7 +9,6 @@
   margin-bottom: 10px;
   margin-top: 10px;
   display: flex;
-
 }
 
 .recipe-card:hover {
@@ -54,12 +53,16 @@
   cursor: pointer;
 }
 
+.view-recipe-button:hover {
+  background-color: #2a3c0a;
+}
 
 .more-recipes-indicator {
   text-align: center;
   margin-top: 40px;
   font-size: 18px;
   opacity: 0.6;
+  font-family: 'Lobster';
 }
 
 .more-recipes-indicator span {
@@ -67,3 +70,22 @@
   font-size: 24px;
 }
 
+.back-button {
+  background-color: #3a4c13;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-family: 'Lobster';
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 30px auto 40px;
+  display: block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #2a3c0a;
+  transform: translateY(-2px);
+}

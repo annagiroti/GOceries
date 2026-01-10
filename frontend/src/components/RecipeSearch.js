@@ -20,7 +20,30 @@ function RecipeSearch({ onSearchResults }) {
     
     try {
       const results = await searchRecipesByIngredients(ingredients);
-      onSearchResults(results); // Pass results to parent component
+    
+      // Sort by: 1) Fewest total ingredients, 2) Highest match %, 3) Most user ingredients used
+      const sortedResults = results.sort((a, b) => {
+        const totalA = a.usedIngredientCount + a.missedIngredientCount;
+        const totalB = b.usedIngredientCount + b.missedIngredientCount;
+        
+        const percentageA = (a.usedIngredientCount / totalA) * 100;
+        const percentageB = (b.usedIngredientCount / totalB) * 100;
+        
+        // 1. Prioritize recipes with fewest total ingredients (simpler/cheaper)
+        if (totalA !== totalB) {
+          return totalA - totalB;
+        }
+        
+        // 2. If same total, prioritize higher match percentage
+        if (percentageB !== percentageA) {
+          return percentageB - percentageA;
+        }
+        
+        // 3. If same percentage, prioritize using more of user's ingredients
+        return b.usedIngredientCount - a.usedIngredientCount;
+      });
+
+      onSearchResults(sortedResults);
     } catch (err) {
       setError('Failed to search recipes. Please try again.');
       console.error(err);
