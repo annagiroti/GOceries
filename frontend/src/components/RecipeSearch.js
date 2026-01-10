@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { searchRecipesByIngredients } from '../services/spoonacularApi';
 import './RecipeSearch.css';
+import logo from '../assets/logo.png';
 
 function RecipeSearch({ onSearchResults }) {
   const [ingredients, setIngredients] = useState('');
@@ -54,7 +55,10 @@ function RecipeSearch({ onSearchResults }) {
 
   return (
     <div className="recipe-search-container">
-      <div className="logo">GOceries</div>
+      <div className="logo">
+        <img src={logo} alt="GOceries logo" className="logo-image" />
+        <span className="logo-text">GOceries</span>
+      </div>
       
       <form onSubmit={handleSearch} className="search-form">
         <div className="input-container">
