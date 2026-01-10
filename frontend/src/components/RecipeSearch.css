@@ -51,7 +51,7 @@
 
 .search-form {
   display: flex;
-  flex-direction: column;   /* 👈 stack items */
+  flex-direction: column;   /* stack items */
   align-items: center;
   gap: 12px;                /* space between input & button */
 }

@@ -17,22 +17,27 @@
 }
 
 .recipe-info {
-  padding: 16px;
+  padding: 24px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .recipe-name {
   font-family: 'Lobster';
   font-weight: 800;
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .ingredient-match {
   font-family: 'Lobster';
-  color: #000000;
-  font-size: 16px;
-  margin-bottom: 4px;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: auto;
 }
 
 .cooking-time {
@@ -47,10 +52,14 @@
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 10px 14px;
-  width: 160px;
+  padding: 12px 20px;
+  width: fit-content;
+  min-width: 160px;
+  font-family: 'Lobster';
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .view-recipe-button:hover {
