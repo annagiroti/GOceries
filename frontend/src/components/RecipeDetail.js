@@ -70,7 +70,7 @@ function RecipeDetail({ recipeId, onBack }) {
       </div>
 
       <button className="back-button" onClick={onBack}>
-        Back to Results
+        ← Back to Results
       </button>
     </div>
   );
